@@ -1,7 +1,10 @@
 <h1>Demo#Hello</h1>
  <%target="World"%>
-<%= "Hello #{target}"  %>
+<%= "Hello #{target}"  %></br>
+ID:<%=@id%></br>
+PAGE:<%=@page + 1%>    </br>
 <%@array.each do |i|%>
 <%=i%> </br>
 <%end%>
-<%=link_to("My first Link",{:action=>'index'} ) %>
+<%=link_to("My first Link",{:action=>'index'} ) %> </br>
+<%= params.inspect %>
