@@ -1,0 +1,17 @@
+<h1>User Registration</h1>
+<%=form_for (@authuser),:url=> authusers_path,:method=>:post do |f|%>
+    <p>
+      </br>
+       Email
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      </br>
+      Password
+      <%= f.password_field :password %>
+    </p>
+     <p>
+      <%= f.submit "Sign up" %>
+
+    </p>
+<%end%>

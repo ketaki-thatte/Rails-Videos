@@ -1,0 +1,17 @@
+
+  <h3 >All Projects</h3>
+
+     <%= form_tag projects_path,:method=>:get do %>
+        <%=text_field_tag :search,params[:search] %>
+      <%=submit_tag "search" %>
+  <%end%>
+
+  <%for project in @projects %>
+           <%= link_to project.project_name,project_path(project)%> |
+            <%=link_to "Edit", edit_project_path(project)%>
+            <%=link_to "Delete",project_path(project),:method=>:delete %>
+      </br>
+
+  <%end%>
+    <%= link_to "Create New Project",new_project_path%>
+
