@@ -2,6 +2,7 @@ VideoApp::Application.routes.draw do
   match "hello" => "demo#hello"
 match "index" => "demo#index"
   resources :demo
+  resources :users
 
 
 
